@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/main.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Registration</title>
+</head>
+
+<body class="bg-light">
+    <div class="container shadow p-3 m-5 products-overview rounded">
+        <h2 class="fs-1 fw-bold"><u>Registration</u></h2>
+        <form>
+            <!-- {% csrf_token %} -->
+
+            <div class="form-floating m-3">
+                <input type="text" class="form-control" id="full_name" name="full_name" placeholder="Full Name"
+                    required>
+                <label for="full_name">Full Name</label>
+            </div>
+
+            <div class="form-floating m-3">
+                <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com"
+                    required>
+                <label for="Email">Email address</label>
+            </div>
+
+            <div class="row">
+                <div class="col-3">
+                    <div class="form-floating m-3">
+                        <select class="form-select" id="country_code" name="country_code" aria-label="Default select example"
+                            required>
+                            <option selected>Country Code</option>
+                            <option value="+91">India (+91)</option>
+                            <option value="+33">France (+33)</option>
+                            <option value="+7">Russia (+7)</option>
+                        </select>
+                        <label for="gender">Country Code</label>
+                    </div>
+                </div>
+                <div class="col-9">
+                    <div class="form-floating m-3">
+                        <input type="tel" class="form-control" id="phone" name="phone" placeholder="phone"
+                            pattern="[0-9]{10}" maxlength="10" required>
+                        <label for="phone">Phone Number</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <div class="form-floating m-3">
+                        <input type="date" class="form-control" id="dob" name="dob" placeholder="12/06/1977" required>
+                        <label for="dob">Date of Birth</label>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-floating m-3">
+                        <select class="form-select" id="gender" name="gender" aria-label="Default select example"
+                            required>
+                            <option selected>Select Gender</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="other">Other</option>
+                        </select>
+                        <label for="gender">Gender</label>
+                    </div>
+                </div>
+            </div>
+       
+            <div class="form-floating m-3">
+                <input type="password" class="form-control " id="password" name="password"
+                    placeholder="Password">
+                <label for="Password">Password</label>
+            </div>
+<!--             
+            <div class="row">
+                <div class="col">
+                    <div class="form-floating m-3">
+                        <input type="password" class="form-control " id="password" name="password"
+                            placeholder="Password">
+                        <label for="Password">Password</label>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-floating m-3">
+                        <input type="password" class="form-control" id="confirm_password" name="confirm_password"
+                            placeholder="confirm_password" onkeypress="matchPasswords_in_register()" 
+                           onkeyup="matchPasswords_in_register()" onchange="matchPasswords_in_register()" onkeydown="matchPasswords_in_register" required>
+                        <label for="confirm_password">Confirm Password</label>
+                    </div>
+                </div>
+            </div>
+            <div class="text-danger fw-bold text-center op-0" id="password_not_match" role="alert">
+                Passwords do not match
+              </div> -->
+            <br>
+            <h5 class="text-secondary">Address</h5>
+            <div class="form-floating m-3">
+                <textarea type="text" class="form-control" id="address" name="address" placeholder="address"
+                    required></textarea>
+                <label for="address">Address</label>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="form-floating m-3">
+                        <input type="text" class="form-control " id="city" name="city" placeholder="city" required>
+                        <label for="city">City</label>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-floating m-3">
+                        <input type="text" class="form-control" id="state" name="state" placeholder="state" required>
+                        <label for="state">State</label>
+                    </div>
+                </div>
+
+            </div>
+            <button class="btn btn-light  m-3 p-2 " type="submit">Save</button>
+        </form>
+    </div>
+</body>
+<script src="/static/js/script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+
+</html>
