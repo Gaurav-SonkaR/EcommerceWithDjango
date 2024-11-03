@@ -7,9 +7,9 @@ def home(request):
 def login(request):
     data ={}
     try:   
-
-                email = request.GET.get('email')
-                password = request.GET.get('password')
+        if request.method == "POST":
+                email = request.POST.get('email')
+                password = request.POST.get('password')
                 data={
                     'email':email,
                     'password':password,

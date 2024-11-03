@@ -10,8 +10,8 @@
 <body class="bg-light"> 
     <div class="container shadow p-3 m-5 products-overview rounded">
         <h2 class="fs-1 fw-bold"><u>Login</u></h2>
-        <form >
-            <!-- {% csrf_token %} -->
+        <form  method="post">
+            {% csrf_token %} 
             <div class="form-floating m-3">
                 <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com">
                 <label for="Email">Email address</label>
