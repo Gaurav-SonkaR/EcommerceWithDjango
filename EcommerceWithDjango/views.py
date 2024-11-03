@@ -22,32 +22,33 @@ def register(request):
     data = {}
     try:
         # Suggested code may be subject to a license. Learn more: ~LicenseLog:1856409913.
-        full_name = request.GET.get('full_name')
-        email = request.GET.get('email')
-        country_code = request.GET.get('country_code')
-        phone = request.GET.get('phone')
-        dob = request.GET.get('dob')
-        gender = request.GET.get('gender')
-        password = request.GET.get('password')
-        confirm_password = request.GET.get('confirm_password')
-        address = request.GET.get('address')
-        city = request.GET.get('city')
-        state = request.GET.get('state')
+        if request.method == "POST":
+            full_name = request.POST.get('full_name')
+            email = request.POST.get('email')
+            country_code = request.POST.get('country_code')
+            phone = request.POST.get('phone')
+            dob = request.POST.get('dob')
+            gender = request.POST.get('gender')
+            password = request.POST.get('password')
+            confirm_password = request.POST.get('confirm_password')
+            address = request.POST.get('address')
+            city = request.POST.get('city')
+            state = request.POST.get('state')
 
-        data={
-            'full_name' : full_name,
-            'email' : email,
-            'country_code' : country_code,
-            'phone' : phone,
-            'dob' : dob,
-            'gender' : gender,
-            'password' : password,
-            'confirm_password' : confirm_password,
-            'address' : address,
-            'city' : city,
-            'state' : state,
-        }
-        print(data)
+            data={
+                'full_name' : full_name,
+                'email' : email,
+                'country_code' : country_code,
+                'phone' : phone,
+                'dob' : dob,
+                'gender' : gender,
+                'password' : password,
+                'confirm_password' : confirm_password,
+                'address' : address,
+                'city' : city,
+                'state' : state,
+            }
+            print(data)
     except:
         pass
     return render(request,"register.html",data)

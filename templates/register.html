@@ -13,8 +13,8 @@
 <body class="bg-light">
     <div class="container shadow p-3 m-5 products-overview rounded">
         <h2 class="fs-1 fw-bold"><u>Registration</u></h2>
-        <form>
-            <!-- {% csrf_token %} -->
+        <form method="post">
+            {% csrf_token %}
 
             <div class="form-floating m-3">
                 <input type="text" class="form-control" id="full_name" name="full_name" placeholder="Full Name"
@@ -71,12 +71,12 @@
                 </div>
             </div>
        
-            <div class="form-floating m-3">
+          <!--     <div class="form-floating m-3">
                 <input type="password" class="form-control " id="password" name="password"
                     placeholder="Password">
                 <label for="Password">Password</label>
-            </div>
-<!--             
+            </div>   -->
+          
             <div class="row">
                 <div class="col">
                     <div class="form-floating m-3">
@@ -96,7 +96,7 @@
             </div>
             <div class="text-danger fw-bold text-center op-0" id="password_not_match" role="alert">
                 Passwords do not match
-              </div> -->
+              </div> 
             <br>
             <h5 class="text-secondary">Address</h5>
             <div class="form-floating m-3">
