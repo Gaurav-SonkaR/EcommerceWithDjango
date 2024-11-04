@@ -30,7 +30,7 @@ def register(request):
             dob = request.POST.get('dob')
             gender = request.POST.get('gender')
             password = request.POST.get('password')
-            confirm_password = request.POST.get('confirm_password')
+            # confirm_password = request.POST.get('confirm_password')
             address = request.POST.get('address')
             city = request.POST.get('city')
             state = request.POST.get('state')
@@ -43,7 +43,7 @@ def register(request):
                 'dob' : dob,
                 'gender' : gender,
                 'password' : password,
-                'confirm_password' : confirm_password,
+                # 'confirm_password' : confirm_password,
                 'address' : address,
                 'city' : city,
                 'state' : state,
